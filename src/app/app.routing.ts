@@ -1,6 +1,7 @@
 import { RouterModule, Routes } from "@angular/router";
 import { DirectivesComponent } from "./components/directives/directives.component";
 import { BindingComponent } from './components/binding/binding.component';
+import { InfoComponent } from './components/info/info.component';
 
 const routes: Routes = [
 	{
@@ -15,6 +16,10 @@ const routes: Routes = [
 	{
 		path: "directives",
 		component: DirectivesComponent
+	},
+	{
+		path: "service",
+		component: InfoComponent
 	}
 		
 

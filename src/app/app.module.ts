@@ -10,20 +10,26 @@ import { HighlightDirective } from './directives/highlight.directive';
 //import routing 
 import { routing } from './app.routing';
 import { BindingComponent } from './components/binding/binding.component';
+import { InfoComponent } from './components/info/info.component';
+
+import { MyServiceService } from './services/my-service.service';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     DirectivesComponent,
     heroSwitchComponents,
     HighlightDirective,
-    BindingComponent
+    BindingComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    routing
+    routing,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [MyServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
