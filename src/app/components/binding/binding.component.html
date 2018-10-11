@@ -1,0 +1,26 @@
+<title>Data Binding</title>
+<div>
+  <h2>Data Binding</h2>
+  <hr>
+  <!-- One way binding -->
+  <h3>One way binding</h3>
+
+  <!-- Expression binding -->
+  <h4>Expression binding</h4>
+  <p>{{flag ? en : vi}}</p>
+
+  <!-- Property binding -->
+  <h4>Property</h4>
+  <p [ngStyle]="{'color': myColor}">aaaaaa</p>
+  <hr>
+
+  <!-- Event binding -->
+  <h3>Event binding</h3>
+  <button (click)="changeColor()">Change</button>
+  <hr>
+
+  <!-- Two way binding -->
+  <h3>Two way binding</h3>
+  <input type="text" [(ngModel)]="textInput">
+  <p>{{textInput}}</p>
+</div>

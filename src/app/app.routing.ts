@@ -1,16 +1,22 @@
 import { RouterModule, Routes } from "@angular/router";
 import { DirectivesComponent } from "./components/directives/directives.component";
+import { BindingComponent } from './components/binding/binding.component';
 
 const routes: Routes = [
 	{
 		path: '',
 		pathMatch: "full",
-		redirectTo: "home"
+		redirectTo: "binding"
 	},
 	{
-		path: "home",
-        component: DirectivesComponent
-    }
+		path: "binding",
+		component: BindingComponent
+	},
+	{
+		path: "directives",
+		component: DirectivesComponent
+	}
+		
 
 ]
 

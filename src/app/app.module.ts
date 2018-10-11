@@ -8,13 +8,15 @@ import { heroSwitchComponents } from './model/hero-switch';
 import { HighlightDirective } from './directives/highlight.directive';
 
 //import routing 
-import { routing } from './app.routing'
+import { routing } from './app.routing';
+import { BindingComponent } from './components/binding/binding.component';
 @NgModule({
   declarations: [
     AppComponent,
     DirectivesComponent,
     heroSwitchComponents,
-    HighlightDirective
+    HighlightDirective,
+    BindingComponent
   ],
   imports: [
     BrowserModule,
