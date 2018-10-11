@@ -1,0 +1,54 @@
+<!--Structural Directives-->
+<h3>Structural Directives</h3>
+
+<!--*ngif-->
+<h4>NgIf</h4>
+<p *ngIf="hidden">
+  Hello world!
+</p>
+<button (click)="show()">{{hidden ? 'Hide' : 'Show'}}</button>
+<hr>
+<!--End *ngIf-->
+
+<!--*ngFor-->
+<h4>NgFor</h4>
+<div>
+  Show list of heroes:
+  <div *ngFor="let h of heroes">{{h.name}} ({{h.emotion}})</div>
+</div>
+<hr>
+<!--End *ngFor-->
+
+<!--*ngSwitch-->
+<h4>NgSwitch</h4>
+<div>
+  <select [(ngModel)]="hero">
+    <option *ngFor="let h of heroes" [ngValue]="h">{{h.name}} ({{h.emotion}})</option>
+  </select>
+</div>
+<div><br></div>
+<div [ngSwitch]="hero?.emotion" >
+  <app-happy-hero *ngSwitchCase="'happy'" [hero]="hero"></app-happy-hero>
+  <app-sad-hero *ngSwitchCase="'sad'" [hero]="hero"></app-sad-hero>
+  <app-confused-hero *ngSwitchCase="'app-confused'" [hero]="hero"></app-confused-hero>
+  <app-unknown-hero *ngSwitchDefault [hero]="hero"></app-unknown-hero>
+</div>
+<br>
+<hr>
+<!--End *ngSwitch-->
+
+<!--End Structural Directives-->
+
+<!--Attribute Directives-->
+<h3>Attribute Directives</h3>
+<p [ngStyle]="{'color': myColor}">
+    Attribute Directives 
+</p>
+<button (click)="changeTextColor()">Change Text Color</button>
+<hr>
+<h3>Custom Directives</h3>
+<div>
+  <p [appHighlight]="highlight">HighLight me!</p>
+</div>
+<button (click)="changeHighlight()">Change highlight to red</button>
+<!--End Attribute Directives-->
