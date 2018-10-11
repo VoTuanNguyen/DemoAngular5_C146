@@ -1,26 +1,38 @@
 <title>Data Binding</title>
-<div>
+<div class="container-fluid">
   <h2>Data Binding</h2>
-  <hr>
-  <!-- One way binding -->
-  <h3>One way binding</h3>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#oneway">One way binding</a></li>
+    <li><a data-toggle="tab" href="#twoway">Two way binding</a></li>
+  </ul>
+  <div class="tab-content">
+    <div id="oneway" class="tab-pane fade in active">
+      <!-- One way binding -->
 
-  <!-- Expression binding -->
-  <h4>Expression binding</h4>
-  <p>{{flag ? en : vi}}</p>
+      <!-- Expression binding -->
+      <h4>Expression binding</h4>
+      <p>{{flag ? en : vi}}</p>
+      <hr>
 
-  <!-- Property binding -->
-  <h4>Property</h4>
-  <p [ngStyle]="{'color': myColor}">aaaaaa</p>
-  <hr>
+      <!-- Property binding -->
+      <h4>Property</h4>
+      <p [ngStyle]="{'color': myColor}">aaaaaa</p>
+      <hr>
 
-  <!-- Event binding -->
-  <h3>Event binding</h3>
-  <button (click)="changeColor()">Change</button>
-  <hr>
+      <!-- Event binding -->
+      <h3>Event binding</h3>
+      <button (click)="changeColor()">Change</button>
+      <hr>
 
-  <!-- Two way binding -->
-  <h3>Two way binding</h3>
-  <input type="text" [(ngModel)]="textInput">
-  <p>{{textInput}}</p>
+    </div>
+    <div id="twoway" class="tab-pane fade">
+
+      <!-- Two way binding -->
+      <h3>Two way binding</h3>
+      <p><b>Data input:</b> {{textInput}}</p>
+      <input type="text" [(ngModel)]="textInput">
+    </div>
+  </div>
+
+
 </div>

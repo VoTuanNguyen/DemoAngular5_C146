@@ -1,58 +1,89 @@
 <title>Directives</title>
-<!--Structural Directives-->
-<h3>Structural Directives</h3>
+<div class="container-fluid">
+  <ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#structural">Structural Directives</a></li>
+  <li><a data-toggle="tab" href="#attribute">Attribute Directives</a></li>
+  <li><a data-toggle="tab" href="#customer">Customer Directives</a></li>
+</ul>
 
-<!--*ngif-->
-<h4>NgIf</h4>
-<p *ngIf="hidden">
-  Hello world!
-</p>
-<button (click)="show()">{{hidden ? 'Hide' : 'Show'}}</button>
-<hr>
-<!--End *ngIf-->
+<div class="tab-content">
+  <div id="structural" class="tab-pane fade in active">
 
-<!--*ngFor-->
-<h4>NgFor</h4>
-<div>
-  Show list of heroes:
-  <div *ngFor="let h of heroes">{{h.name}} ({{h.emotion}})</div>
-</div>
-<hr>
-<!--End *ngFor-->
+    <!--Structural Directives-->
+    <h3>Structural Directives</h3>
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#ngif">NgIf</a></li>
+      <li><a data-toggle="tab" href="#ngfor">NgFor</a></li>
+      <li><a data-toggle="tab" href="#ngswitch">NgSwitch</a></li>
+    </ul>
+    <div class="tab-content">
+      <div id="ngif" class="tab-pane fade in active">
 
-<!--*ngSwitch-->
-<h4>NgSwitch</h4>
-<div>
-  <select [(ngModel)]="hero">
-    <option *ngFor="let h of heroes" [ngValue]="h">{{h.name}} ({{h.emotion}})</option>
-  </select>
-</div>
-<div><br></div>
-<div [ngSwitch]="hero?.emotion" >
-  <app-happy-hero *ngSwitchCase="'happy'" [hero]="hero"></app-happy-hero>
-  <app-sad-hero *ngSwitchCase="'sad'" [hero]="hero"></app-sad-hero>
-  <app-confused-hero *ngSwitchCase="'app-confused'" [hero]="hero"></app-confused-hero>
-  <app-unknown-hero *ngSwitchDefault [hero]="hero"></app-unknown-hero>
-</div>
-<br>
-<hr>
-<!--End *ngSwitch-->
+        <!--*ngif-->
+        <h4>NgIf</h4>
+        <p *ngIf="hidden">
+          Hello world!
+        </p>
+        <button (click)="show()">{{hidden ? 'Hide' : 'Show'}}</button>
+        <!--End *ngIf-->
 
-<!--End Structural Directives-->
+      </div>
+      <div id="ngfor" class="tab-pane fade">
 
-<!--Attribute Directives-->
-<h3>Attribute Directives</h3>
-<p [ngStyle]="{'color': myColor}">
-    Attribute Directives 
-</p>
-<button (click)="changeTextColor()">Change Text Color</button>
-<hr>
-<!--End Attribute Directives-->
+        <!--*ngFor-->
+        <h4>NgFor</h4>
+        <div>
+          Show list of heroes:
+          <div *ngFor="let h of heroes">{{h.name}} ({{h.emotion}})</div>
+        </div>
+        <!--End *ngFor-->
 
-<!-- Customer directives -->
-<h3>Customer Directives</h3>
-<div>
-  <p [appHighlight]="highlight">HighLight me!</p>
-</div>
-<button (click)="changeHighlight()">Change highlight to red</button>
-<!-- End Customer directives -->
+      </div>
+      <div id="ngswitch" class="tab-pane fade">
+
+        <!--*ngSwitch-->
+        <h4>NgSwitch</h4>
+        <div>
+          <select [(ngModel)]="hero">
+            <option *ngFor="let h of heroes" [ngValue]="h">{{h.name}} ({{h.emotion}})</option>
+          </select>
+        </div>
+        <div><br></div>
+        <div [ngSwitch]="hero?.emotion">
+          <app-happy-hero *ngSwitchCase="'happy'" [hero]="hero"></app-happy-hero>
+          <app-sad-hero *ngSwitchCase="'sad'" [hero]="hero"></app-sad-hero>
+          <app-confused-hero *ngSwitchCase="'app-confused'" [hero]="hero"></app-confused-hero>
+          <app-unknown-hero *ngSwitchDefault [hero]="hero"></app-unknown-hero>
+        </div>
+        <!--End *ngSwitch-->
+
+      </div>
+    </div>
+    <!--End Structural Directives-->
+
+  </div>
+
+  <div id="attribute" class="tab-pane fade">
+
+    <!--Attribute Directives-->
+    <h3>Attribute Directives</h3>
+    <p [ngStyle]="{'color': myColor}">
+      Attribute Directives
+    </p>
+    <button (click)="changeTextColor()">Change Text Color</button>
+    <hr>
+    <!--End Attribute Directives-->
+
+  </div>
+  <div id="customer" class="tab-pane fade">
+
+    <!-- Customer directives -->
+    <h3>Customer Directives</h3>
+    <div>
+      <p [appHighlight]="highlight">HighLight me!</p>
+    </div>
+    <button (click)="changeHighlight()">Change highlight to red</button>
+    <!-- End Customer directives -->
+    
+  </div>
+</div></div>

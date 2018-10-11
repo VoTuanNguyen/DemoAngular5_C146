@@ -18,7 +18,7 @@ const routes: Routes = [
 		component: DirectivesComponent
 	},
 	{
-		path: "service",
+		path: "services",
 		component: InfoComponent
 	}
 		
