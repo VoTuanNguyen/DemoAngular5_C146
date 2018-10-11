@@ -1,0 +1,10 @@
+Các bạn đã biết cách lấy dữ liệu từ các input thông qua two way binding hoặc event
+bingding. Tuy nhiên thì đối với những form nhập dữ liệu lớn và phức tạp hơn
+thì việc thu thập dữ liệu từ các input gặp nhiều khó khăn chính vì thế chúng
+ta cần gộp các input thành các form để dễ dàng quản lý dữ liệu
+
+Directive sẽ đưa ra các chỉ dẫn để angular chuyển đổi các template thành dom
+attribute thay đổi việc hiển thị hoặc là hành vi của dom, component hoặc directive
+khác
+structural -> ảnh hưởng đến cấu trúc của thẻ dom, thêm hoặc bớt
+component -> 
