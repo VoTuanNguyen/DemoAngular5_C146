@@ -7,6 +7,8 @@ import { DirectivesComponent } from './components/directives/directives.componen
 import { heroSwitchComponents } from './model/hero-switch';
 import { HighlightDirective } from './directives/highlight.directive';
 
+//import routing 
+import { routing } from './app.routing'
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { HighlightDirective } from './directives/highlight.directive';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
