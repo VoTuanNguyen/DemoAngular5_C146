@@ -29,4 +29,13 @@ export class DirectivesComponent implements OnInit {
   changeHighlight(){
     this.highlight = 'red';
   }
+  addList(){
+    let arr = { id: 5, name: 'NguyenVT2', emotion: 'happy' };
+    this.heroes.push(arr);
+    console.log(heroes);
+  }
+  removeList(){
+    this.heroes.pop();
+    //this.heroes.splice(this.heroes.length - 1, 1);
+  }
 }

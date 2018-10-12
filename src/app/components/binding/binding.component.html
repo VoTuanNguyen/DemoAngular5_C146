@@ -16,12 +16,13 @@
 
       <!-- Property binding -->
       <h4>Property</h4>
-      <p [ngStyle]="{'color': myColor}">aaaaaa</p>
+      <p [ngStyle]="{'color': myColor}" [hidden]="isShow">aaaaaa</p>
       <hr>
 
       <!-- Event binding -->
       <h3>Event binding</h3>
       <button (click)="changeColor()">Change</button>
+      <button (click)="hidden()">{{isShow ? 'Show' : 'Hide'}}</button>
       <hr>
 
     </div>
@@ -33,6 +34,4 @@
       <input type="text" [(ngModel)]="textInput">
     </div>
   </div>
-
-
 </div>
