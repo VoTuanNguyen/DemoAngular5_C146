@@ -14,6 +14,7 @@ import { InfoComponent } from './components/info/info.component';
 
 import { MyServiceService } from './services/my-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FormComponent } from './components/form/form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     heroSwitchComponents,
     HighlightDirective,
     BindingComponent,
-    InfoComponent
+    InfoComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

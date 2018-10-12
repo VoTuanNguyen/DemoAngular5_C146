@@ -1,0 +1,29 @@
+<title>Form</title>
+<div class="container-fluid">
+  <h3>Form</h3>
+  <div class="col-sm-3">
+    <form (submit)="onSubmit(formInfo)" #formInfo="ngForm">
+      <input type="text" name="name" [(ngModel)]="name" placeholder="Enter your name" class="form-control" required>
+      <p *ngIf="formInfo.controls.name?.errors?.required && notSubmit">
+        Name is not required
+      </p>
+      <br>
+      <input type="text" name="email" [(ngModel)]="email" placeholder="Enter your email" class="form-control" required>
+      <p *ngIf="formInfo.controls.email?.errors?.required && notSubmit">
+        Email is not required
+      </p>
+      <br>
+      <input type="password" name="password" [(ngModel)]="password" placeholder="Enter your password" class="form-control" required>
+      <p *ngIf="formInfo.controls.password?.errors?.required && notSubmit">
+        Password is not required
+      </p>
+      <br>
+      <input type="text" name="address" [(ngModel)]="address" placeholder="Enter your address" class="form-control">
+      <br>
+      <button class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+<div>
+  {{money | date}}
+</div>

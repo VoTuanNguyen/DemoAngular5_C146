@@ -2,6 +2,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { DirectivesComponent } from "./components/directives/directives.component";
 import { BindingComponent } from './components/binding/binding.component';
 import { InfoComponent } from './components/info/info.component';
+import { FormComponent } from './components/form/form.component';
 
 const routes: Routes = [
 	{
@@ -20,9 +21,11 @@ const routes: Routes = [
 	{
 		path: "services",
 		component: InfoComponent
-	}
-		
-
+	},
+	{
+		path: "form",
+		component: FormComponent
+	}	
 ]
 
 export const routing = RouterModule.forRoot(routes);
