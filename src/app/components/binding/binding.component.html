@@ -11,12 +11,14 @@
 
       <!-- Expression binding -->
       <h4>Expression binding</h4>
+      <p>{{ en }}</p>
       <p>{{flag ? en : vi}}</p>
       <hr>
 
       <!-- Property binding -->
       <h4>Property</h4>
-      <p [ngStyle]="{'color': myColor}" [hidden]="isShow">aaaaaa</p>
+      <p [ngStyle]="{'color': myColor}">Ngạc nhiên chưa</p>
+      <p [hidden]="isShow">Ú Òa</p>
       <hr>
 
       <!-- Event binding -->
@@ -30,7 +32,7 @@
 
       <!-- Two way binding -->
       <h3>Two way binding</h3>
-      <p><b>Data input:</b> {{textInput}}</p>
+      <p><b>Data input:</b>{{textInput}}</p>
       <input type="text" [(ngModel)]="textInput">
     </div>
   </div>
