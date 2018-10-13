@@ -1,9 +1,15 @@
 <title>Directives</title>
 <div class="container-fluid">
   <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#structural">Structural Directives</a></li>
-    <li><a data-toggle="tab" href="#attribute">Attribute Directives</a></li>
-    <li><a data-toggle="tab" href="#customer">Customer Directives</a></li>
+    <li class="active">
+      <a data-toggle="tab" href="#structural">Structural Directives</a>
+    </li>
+    <li>
+      <a data-toggle="tab" href="#attribute">Attribute Directives</a>
+    </li>
+    <li>
+      <a data-toggle="tab" href="#customer">Customer Directives</a>
+    </li>
   </ul>
 
   <div class="tab-content">
@@ -12,9 +18,15 @@
       <!--Structural Directives-->
       <h3>Structural Directives</h3>
       <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#ngif">NgIf</a></li>
-        <li><a data-toggle="tab" href="#ngfor">NgFor</a></li>
-        <li><a data-toggle="tab" href="#ngswitch">NgSwitch</a></li>
+        <li class="active">
+          <a data-toggle="tab" href="#ngif">NgIf</a>
+        </li>
+        <li>
+          <a data-toggle="tab" href="#ngfor">NgFor</a>
+        </li>
+        <li>
+          <a data-toggle="tab" href="#ngswitch">NgSwitch</a>
+        </li>
       </ul>
       <div class="tab-content">
         <div id="ngif" class="tab-pane fade in active">
@@ -24,7 +36,11 @@
           <p *ngIf="hidden">
             Hello world!
           </p>
-          <button (click)="show()">{{hidden ? 'Hide' : 'Show'}}</button>
+          <div class="row">
+            <div class="col-sm-2">
+              <button (click)="show()" class="btn btn-primary">{{hidden ? 'Hide' : 'Show'}}</button>
+            </div>
+          </div>
           <!--End *ngIf-->
 
         </div>
@@ -48,16 +64,19 @@
           <!--End *ngFor-->
 
         </div>
+        <!--*ngSwitch-->
         <div id="ngswitch" class="tab-pane fade">
-
-          <!--*ngSwitch-->
           <h4>NgSwitch</h4>
-          <div>
-            <select [(ngModel)]="hero">
-              <option *ngFor="let h of heroes" [ngValue]="h">{{h.name}} ({{h.emotion}})</option>
-            </select>
+          <div class="row">
+            <div class="col-sm-3">
+              <select [(ngModel)]="hero" class="form-control">
+                <option *ngFor="let h of heroes" [ngValue]="h">{{h.name}} ({{h.emotion}})</option>
+              </select>
+            </div>
           </div>
-          <div><br></div>
+          <div>
+            <br>
+          </div>
           <div [ngSwitch]="hero?.emotion">
             <app-happy-hero *ngSwitchCase="'happy'" [hero]="hero"></app-happy-hero>
             <app-sad-hero *ngSwitchCase="'sad'" [hero]="hero"></app-sad-hero>
@@ -79,7 +98,11 @@
       <p [ngStyle]="{'color': myColor}">
         Attribute Directives
       </p>
-      <button (click)="changeTextColor()">Change Text Color</button>
+      <div class="row">
+        <div class="col-sm-2">
+          <button (click)="changeTextColor()" class="btn btn-primary">Change Text Color</button>
+        </div>
+      </div>
       <hr>
       <!--End Attribute Directives-->
 
@@ -91,7 +114,11 @@
       <div>
         <p [appHighlight]="highlight">HighLight me!</p>
       </div>
-      <button (click)="changeHighlight()">Change highlight to red</button>
+      <div class="row">
+        <div class="col-sm-3">
+          <button (click)="changeHighlight()" class="btn btn-primary">Change highlight to red</button>
+        </div>
+      </div>
       <!-- End Customer directives -->
 
     </div>

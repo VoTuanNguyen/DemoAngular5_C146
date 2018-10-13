@@ -1,35 +1,36 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
+
+import { AppRoutingModule } from './app.routing';
+import { NavbarModule } from './components/shared/navbar/navbar.module';
+import { FooterModule } from './components/shared/footer/footer.module';
+import { SidebarModule } from './components/sidebar/sidebar.module';
 
 import { AppComponent } from './app.component';
-import { DirectivesComponent } from './components/directives/directives.component';
-import { heroSwitchComponents } from './model/hero-switch';
-import { HighlightDirective } from './directives/highlight.directive';
-
-//import routing 
-import { routing } from './app.routing';
-import { BindingComponent } from './components/binding/binding.component';
-import { InfoComponent } from './components/info/info.component';
 
 import { MyServiceService } from './services/my-service.service';
 import { HttpClientModule } from '@angular/common/http';
-import { FormComponent } from './components/form/form.component';
+
+import { LayoutComponent } from './components/layout/layout.component';
+
 @NgModule({
+  imports: [
+    BrowserAnimationsModule,
+    FormsModule,
+    RouterModule,
+    HttpModule,
+    NavbarModule,
+    FooterModule,
+    SidebarModule,
+    AppRoutingModule,
+    HttpClientModule
+  ],
   declarations: [
     AppComponent,
-    DirectivesComponent,
-    heroSwitchComponents,
-    HighlightDirective,
-    BindingComponent,
-    InfoComponent,
-    FormComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    routing,
-    HttpClientModule
+    LayoutComponent
   ],
   providers: [MyServiceService],
   bootstrap: [AppComponent]

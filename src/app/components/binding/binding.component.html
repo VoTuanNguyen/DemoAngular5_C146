@@ -2,13 +2,17 @@
 <div class="container-fluid">
   <h2>Data Binding</h2>
   <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#oneway">One way binding</a></li>
-    <li><a data-toggle="tab" href="#twoway">Two way binding</a></li>
+    <li class="active">
+      <a data-toggle="tab" href="#oneway">One way binding</a>
+    </li>
+    <li>
+      <a data-toggle="tab" href="#twoway">Two way binding</a>
+    </li>
   </ul>
   <div class="tab-content">
     <div id="oneway" class="tab-pane fade in active">
       <!-- One way binding -->
-
+      <h3>One way binding</h3>
       <!-- Expression binding -->
       <h4>Expression binding</h4>
       <p>{{ en }}</p>
@@ -22,9 +26,15 @@
       <hr>
 
       <!-- Event binding -->
-      <h3>Event binding</h3>
-      <button (click)="changeColor()">Change</button>
-      <button (click)="hidden()">{{isShow ? 'Show' : 'Hide'}}</button>
+      <h4>Event binding</h4>
+      <div class="row">
+        <div class="col-sm-1">
+          <button (click)="changeColor()" class="btn btn-primary">Change</button>
+        </div>
+        <div class="col-sm-1">
+          <button (click)="hidden()" class="btn btn-danger">{{isShow ? 'Show' : 'Hide'}}</button>
+        </div>
+      </div>
       <hr>
 
     </div>
@@ -32,8 +42,13 @@
 
       <!-- Two way binding -->
       <h3>Two way binding</h3>
-      <p><b>Data input:</b>{{textInput}}</p>
-      <input type="text" [(ngModel)]="textInput">
+      <p>
+        <b>Data input: </b>{{textInput}}</p>
+      <div class="row">
+        <div class="col-sm-3">
+          <input type="text" class="form-control" [(ngModel)]="textInput">
+        </div>
+      </div>
     </div>
   </div>
 </div>

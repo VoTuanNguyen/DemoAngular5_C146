@@ -1,31 +1,36 @@
-import { RouterModule, Routes } from "@angular/router";
-import { DirectivesComponent } from "./components/directives/directives.component";
-import { BindingComponent } from './components/binding/binding.component';
-import { InfoComponent } from './components/info/info.component';
-import { FormComponent } from './components/form/form.component';
+import { NgModule } from '@angular/core';
+import { CommonModule, } from '@angular/common';
+import { BrowserModule  } from '@angular/platform-browser';
+import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [
-	{
-		path: '',
-		pathMatch: "full",
-		redirectTo: "binding"
-	},
-	{
-		path: "binding",
-		component: BindingComponent
-	},
-	{
-		path: "directives",
-		component: DirectivesComponent
-	},
-	{
-		path: "services",
-		component: InfoComponent
-	},
-	{
-		path: "form",
-		component: FormComponent
-	}	
-]
+import { LayoutComponent } from './components/layout/layout.component';
 
-export const routing = RouterModule.forRoot(routes);
+const routes: Routes =[
+  {
+    path: '',
+    redirectTo: 'binding',
+    pathMatch: 'full',
+  }, {
+    path: '',
+    component: LayoutComponent,
+    children: [
+        {
+      path: '',
+      loadChildren: './components/layout/layout.module#LayoutModule'
+  }]},
+  {
+    path: '**',
+    redirectTo: 'binding'
+  }
+];
+
+@NgModule({
+  imports: [
+    CommonModule,
+    BrowserModule,
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+  ],
+})
+export class AppRoutingModule { }
