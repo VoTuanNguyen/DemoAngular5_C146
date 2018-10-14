@@ -10,6 +10,7 @@ import {
 })
 export class LifecycleComponent implements OnInit {
   value: string = '';
+  check = false;
 
   constructor() {
   }

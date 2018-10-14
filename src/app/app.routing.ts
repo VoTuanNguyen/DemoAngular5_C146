@@ -8,7 +8,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 const routes: Routes =[
   {
     path: '',
-    redirectTo: 'binding',
+    redirectTo: 'lifecycle',
     pathMatch: 'full',
   }, {
     path: '',
@@ -20,7 +20,7 @@ const routes: Routes =[
   }]},
   {
     path: '**',
-    redirectTo: 'binding'
+    redirectTo: 'lifecycle'
   }
 ];
 
