@@ -50,7 +50,7 @@
           <h4>NgFor</h4>
           <div>
             Show list of heroes:
-            <div *ngFor="let h of heroes">{{h.name}} ({{h.emotion}})</div>
+            <div *ngFor="let h of heroes; let i = index">{{i+1}}. {{h.name}} ({{h.emotion}})</div>
           </div>
           <br>
           <div class="row">

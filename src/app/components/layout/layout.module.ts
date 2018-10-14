@@ -13,7 +13,8 @@ import { FormComponent } from '../form/form.component';
 import { InfoComponent } from '../info/info.component';
 import { heroSwitchComponents } from '../../model/hero-switch';
 import { HighlightDirective } from '../../directives/highlight.directive';
-
+import { LifecycleComponent } from '../../components/lifecycle/lifecycle.component';
+import { ChildsComponent } from '../../components/childs/childs.component';
 
 @NgModule({
   imports: [
@@ -27,7 +28,9 @@ import { HighlightDirective } from '../../directives/highlight.directive';
     DirectivesComponent,
     InfoComponent,
     heroSwitchComponents,
-    HighlightDirective
+    HighlightDirective,
+    LifecycleComponent,
+    ChildsComponent
   ]
 })
 
