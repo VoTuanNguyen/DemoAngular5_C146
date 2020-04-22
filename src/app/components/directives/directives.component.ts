@@ -30,7 +30,7 @@ export class DirectivesComponent implements OnInit {
     this.highlight = 'red';
   }
   addList(){
-    let arr = { id: 5, name: 'NguyenVT2', emotion: 'happy' };
+    let arr = { id: 5, name: 'NguyenVT', emotion: 'happy' };
     this.heroes.push(arr);
     console.log(heroes);
   }
